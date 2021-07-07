@@ -1,0 +1,71 @@
+import React, { Component } from "react";
+
+class Form extends React.Component {
+  render() {
+    return (
+      <div id="Form">
+        <h3>--------Register-------</h3>
+        <h5> Create Your Own Account, its free and only takes Minute</h5>
+        <form onSubmit={this.props.handleFormSubmit}>
+          <div>
+            {" "}
+            <input
+              id="firstName"
+              value={this.props.newFirstName}
+              type="text"
+              name="firstName"
+              placeholder="FirstName"
+              onChange={this.props.handleInputChange}
+            />
+            <input
+              id="lastName"
+              value={this.props.newLastName}
+              type="text"
+              name="lastName"
+              placeholder="LastName"
+              onChange={this.props.handleInputChange}
+            />
+          </div>
+
+          <input
+            id="email"
+            value={this.props.newEmail}
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={this.props.handleInputChange}
+          />
+          <br />
+          <input
+            id="password"
+            value={this.props.newPassword}
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={this.props.handleInputChange}
+          />
+          <br />
+          <input
+            id="confirmpassword"
+            value={this.props.newConfirmPassword}
+            type="password"
+            name="confirmpassword"
+            placeholder="ConfirmPassword"
+            onChange={this.props.handleInputChange}
+          />
+          <br />
+          <input type="radio" id="html" name="fav_language" value="HTML" />
+          <label for="html">I accepts Terms of Use & Privacy Policy</label>
+
+          <br />
+
+          <button type="submit" value="Submit">
+            Register
+          </button>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default Form;
